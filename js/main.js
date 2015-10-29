@@ -16,7 +16,10 @@ $(function(){
 
 	while (random_numbers.length < 8) {
 		number = Math.floor(Math.random() * 8) + 1;
-		if ($.inArray(number, random_numbers) === -1){
+		if (random_numbers.length == 7){
+			random_numbers.push(number);
+		}
+		else if ($.inArray(number, random_numbers) === -1){
 			if (number != correct_numbers[random_numbers.length]) {
 				random_numbers.push(number);
 			}
